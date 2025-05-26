@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Алейна: История Любви и Судьбы</title>
+    <title>Алена: История Любви и Судьбы</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Пролог</h1>
-        <p>Ты — Алейна, обычная студентка. Внезапно мир вокруг меняется, и ты оказываешься в магическом королевстве Элианор.</p>
-        <button onclick="nextScene()">Далее</button>
+        <h1>Алена: История Любви и Судьбы</h1>
+        <img id="gameImage" src="forest.jpg" alt="Сцена игры" style="max-width: 100%; height: auto;">
+        <p id="story">Добро пожаловать в игру! Ты просыпаешься в незнакомом лесу. Что ты сделаешь?</p>
+        <audio id="gameAudio" autoplay loop>
+            <source src="forest-ambience.mp3" type="audio/mpeg">
+            Ваш браузер не поддерживает аудио.
+        </audio>
+        <div id="buttonContainer">
+            <button onclick="nextScene('go_forward')">Идти вперед</button>
+            <button onclick="nextScene('look_around')">Осмотреться</button>
+            <button onclick="nextScene('rest')">Отдохнуть</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
